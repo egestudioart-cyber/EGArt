@@ -1,0 +1,421 @@
+Index.html 
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Marina | Cuadros de Resina y Textura en Relieve</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sand: '#F4EFEB',
+                        deepblue: '#0B1D2A',
+                        turquoise: '#1D7874',
+                        gold: '#D4AF37',
+                        softwhite: '#FAFAFA',
+                        earth: '#8C6D53'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(11, 29, 42, 0.75), rgba(11, 29, 42, 0.65)), url('https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+        }
+        .card-hover {
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -10px rgba(11, 29, 42, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-softwhite text-deepblue font-sans antialiased selection:bg-turquoise selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-sand/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl font-bold tracking-wider text-deepblue flex items-center gap-2">
+                <i class="fa-solid fa-water text-turquoise"></i> AURA MARINA
+            </a>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                <a href="#inicio" class="hover:text-turquoise transition-colors">Inicio</a>
+                <a href="#galeria" class="hover:text-turquoise transition-colors">Cuadros Disponibles</a>
+                <a href="#personalizados" class="hover:text-turquoise transition-colors">Pedidos a Medida</a>
+                <a href="#contacto" class="hover:text-turquoise transition-colors">Contacto</a>
+            </nav>
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="https://wa.me/34600000000?text=Hola,%20estoy%20interesado/a%20en%20sus%20cuadros%20artesanales." target="_blank" rel="noopener noreferrer" class="bg-turquoise hover:bg-turquoise/90 text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Asesoría Directa
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-deepblue text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-sand px-6 py-4 space-y-3">
+            <a href="#inicio" class="block text-deepblue font-medium py-1">Inicio</a>
+            <a href="#galeria" class="block text-deepblue font-medium py-1">Cuadros Disponibles</a>
+            <a href="#personalizados" class="block text-deepblue font-medium py-1">Pedidos a Medida</a>
+            <a href="#contacto" class="block text-deepblue font-medium py-1">Contacto</a>
+            <a href="https://wa.me/34600000000?text=Hola,%20estoy%20interesado/a%20en%20sus%20cuadros." target="_blank" class="w-full mt-2 bg-turquoise text-white px-4 py-2.5 rounded-full text-center block font-medium">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp Directo
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center text-center px-6 pt-20">
+        <div class="max-w-3xl mx-auto space-y-6">
+            <span class="inline-block text-gold uppercase tracking-[0.25em] text-xs font-semibold bg-white/10 px-4 py-1.5 rounded-full border border-gold/30 backdrop-blur-sm">
+                Arte Texturizado & Resina Epoxi
+            </span>
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                La elegancia del mar y la tierra en tu hogar
+            </h1>
+            <p class="text-sand/90 text-lg sm:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                Cuadros artesanales únicos creados a mano combinando resina epoxi de alta calidad, arenas naturales y texturas en relieve tridimensional.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#galeria" class="w-full sm:w-auto bg-turquoise hover:bg-turquoise/80 text-white font-medium px-8 py-4 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5">
+                    Ver Cuadros Disponibles
+                </a>
+                <a href="#personalizados" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-sm font-medium px-8 py-4 rounded-full transition-all">
+                    Encargar a Medida
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería / Cuadros Disponibles -->
+    <section id="galeria" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-deepblue">Cuadros Disponibles</h2>
+            <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+            <p class="text-gray-600 font-light">Obras originales listas para envío inmediato. Cada pieza es irrepetible y cuenta con certificado de autenticidad.</p>
+        </div>
+
+        <!-- Grid de Cuadros -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Cuadro 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-sand shadow-sm card-hover flex flex-col">
+                <div class="relative h-72 overflow-hidden bg-sand">
+                    <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=800" alt="Abismo Turquesa" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" onerror="this.src='https://placehold.co/600x400/F4EFEB/0B1D2A?text=Aura+Marina';">
+                    <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-deepblue text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                        Disponible
+                    </span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-deepblue mb-1">Abismo Turquesa</h3>
+                        <p class="text-xs text-turquoise font-medium tracking-wide uppercase mb-3">Resina Epoxi & Textura Arenas del Norte</p>
+                        <div class="flex items-center justify-between text-sm text-gray-600 border-t border-sand pt-3">
+                            <span><i class="fa-solid fa-ruler-combined mr-1 text-gold"></i> 100 x 50 cm</span>
+                            <span class="text-xs bg-sand/60 px-2.5 py-1 rounded-md">Bastidor 3D</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="font-serif text-2xl font-bold text-deepblue">380 €</span>
+                        <a href="https://wa.me/34600000000?text=Hola,%20estoy%20interesado/a%20en%20adquirir%20el%20cuadro:%20Abismo%20Turquesa%20(380€)." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium px-4 py-2.5 rounded-full transition-colors flex items-center gap-2 shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Consultar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuadro 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-sand shadow-sm card-hover flex flex-col">
+                <div class="relative h-72 overflow-hidden bg-sand">
+                    <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=800" alt="Costa Dorada" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" onerror="this.src='https://placehold.co/600x400/F4EFEB/0B1D2A?text=Aura+Marina';">
+                    <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-deepblue text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                        Disponible
+                    </span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-deepblue mb-1">Costa Dorada & Olas</h3>
+                        <p class="text-xs text-turquoise font-medium tracking-wide uppercase mb-3">Relieve Texturizado con Detalles en Oro</p>
+                        <div class="flex items-center justify-between text-sm text-gray-600 border-t border-sand pt-3">
+                            <span><i class="fa-solid fa-ruler-combined mr-1 text-gold"></i> 120 x 60 cm</span>
+                            <span class="text-xs bg-sand/60 px-2.5 py-1 rounded-md">Bastidor 3D</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="font-serif text-2xl font-bold text-deepblue">450 €</span>
+                        <a href="https://wa.me/34600000000?text=Hola,%20estoy%20interesado/a%20en%20adquirir%20el%20cuadro:%20Costa%20Dorada%20%26%20Olas%20(450€)." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium px-4 py-2.5 rounded-full transition-colors flex items-center gap-2 shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Consultar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuadro 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-sand shadow-sm card-hover flex flex-col">
+                <div class="relative h-72 overflow-hidden bg-sand">
+                    <img src="https://images.unsplash.com/photo-1578926314375-4364a93a882f?auto=format&fit=crop&q=80&w=800" alt="Atardecer Mineral" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" onerror="this.src='https://placehold.co/600x400/F4EFEB/0B1D2A?text=Aura+Marina';">
+                    <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-deepblue text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                        Disponible
+                    </span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-deepblue mb-1">Atardecer Mineral</h3>
+                        <p class="text-xs text-turquoise font-medium tracking-wide uppercase mb-3">Resina, Pigmentos Tierra & Cobre</p>
+                        <div class="flex items-center justify-between text-sm text-gray-600 border-t border-sand pt-3">
+                            <span><i class="fa-solid fa-ruler-combined mr-1 text-gold"></i> 80 x 40 cm</span>
+                            <span class="text-xs bg-sand/60 px-2.5 py-1 rounded-md">Bastidor 3D</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="font-serif text-2xl font-bold text-deepblue">290 €</span>
+                        <a href="https://wa.me/34600000000?text=Hola,%20estoy%20interesado/a%20en%20adquirir%20el%20cuadro:%20Atardecer%20Mineral%20(290€)." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium px-4 py-2.5 rounded-full transition-colors flex items-center gap-2 shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Consultar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuadro 4 -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-sand shadow-sm card-hover flex flex-col">
+                <div class="relative h-72 overflow-hidden bg-sand">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800" alt="Océano Profundo" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" onerror="this.src='https://placehold.co/600x400/F4EFEB/0B1D2A?text=Aura+Marina';">
+                    <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-deepblue text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                        Disponible
+                    </span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-deepblue mb-1">Océano Profundo</h3>
+                        <p class="text-xs text-turquoise font-medium tracking-wide uppercase mb-3">Resina Epoxi Multicapa Efecto Mar</p>
+                        <div class="flex items-center justify-between text-sm text-gray-600 border-t border-sand pt-3">
+                            <span><i class="fa-solid fa-ruler-combined mr-1 text-gold"></i> 150 x 50 cm</span>
+                            <span class="text-xs bg-sand/60 px-2.5 py-1 rounded-md">Panorámico</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="font-serif text-2xl font-bold text-deepblue">520 €</span>
+                        <a href="https://wa.me/34600000000?text=Hola,%20estoy%20interesado/a%20en%20adquirir%20el%20cuadro:%20Océano%20Profundo%20(520€)." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium px-4 py-2.5 rounded-full transition-colors flex items-center gap-2 shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Consultar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuadro 5 -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-sand shadow-sm card-hover flex flex-col">
+                <div class="relative h-72 overflow-hidden bg-sand">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800" alt="Dunas de Marfil" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" onerror="this.src='https://placehold.co/600x400/F4EFEB/0B1D2A?text=Aura+Marina';">
+                    <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-deepblue text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                        Disponible
+                    </span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-deepblue mb-1">Dunas de Marfil</h3>
+                        <p class="text-xs text-turquoise font-medium tracking-wide uppercase mb-3">Textura Pesada Blanca y Pan de Oro</p>
+                        <div class="flex items-center justify-between text-sm text-gray-600 border-t border-sand pt-3">
+                            <span><i class="fa-solid fa-ruler-combined mr-1 text-gold"></i> 90 x 90 cm</span>
+                            <span class="text-xs bg-sand/60 px-2.5 py-1 rounded-md">Cuadrado</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="font-serif text-2xl font-bold text-deepblue">390 €</span>
+                        <a href="https://wa.me/34600000000?text=Hola,%20estoy%20interesado/a%20en%20adquirir%20el%20cuadro:%20Dunas%20de%20Marfil%20(390€)." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium px-4 py-2.5 rounded-full transition-colors flex items-center gap-2 shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Consultar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuadro 6 -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-sand shadow-sm card-hover flex flex-col">
+                <div class="relative h-72 overflow-hidden bg-sand">
+                    <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&q=80&w=800" alt="Esencia Marina" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" onerror="this.src='https://placehold.co/600x400/F4EFEB/0B1D2A?text=Aura+Marina';">
+                    <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-deepblue text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                        Disponible
+                    </span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-deepblue mb-1">Esencia Marina</h3>
+                        <p class="text-xs text-turquoise font-medium tracking-wide uppercase mb-3">Resina Epoxi & Cristales Marinos</p>
+                        <div class="flex items-center justify-between text-sm text-gray-600 border-t border-sand pt-3">
+                            <span><i class="fa-solid fa-ruler-combined mr-1 text-gold"></i> 100 x 70 cm</span>
+                            <span class="text-xs bg-sand/60 px-2.5 py-1 rounded-md">Bastidor 3D</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="font-serif text-2xl font-bold text-deepblue">420 €</span>
+                        <a href="https://wa.me/34600000000?text=Hola,%20estoy%20interesado/a%20en%20adquirir%20el%20cuadro:%20Esencia%20Marina%20(420€)." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium px-4 py-2.5 rounded-full transition-colors flex items-center gap-2 shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Consultar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección Pedidos Personalizados -->
+    <section id="personalizados" class="bg-sand py-24 px-6 border-y border-sand">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-turquoise uppercase tracking-widest text-xs font-semibold bg-white px-3 py-1 rounded-md shadow-sm">Exclusividad a tu medida</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-deepblue leading-tight">
+                    Diseñamos la obra perfecta para tu espacio
+                </h2>
+                <p class="text-gray-700 font-light leading-relaxed">
+                    ¿Buscas unas medidas específicas, una paleta de colores que combine con tu salón o quieres regalar algo verdaderamente especial? Creamos cuadros personalizados adaptados 100% a tu estilo.
+                </p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-turquoise"></i>
+                        <span>Elección de dimensiones (cuadrado, vertical, panorámico o trípticos).</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-turquoise"></i>
+                        <span>Gama cromática personalizada (inspirada en tu decoración).</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-turquoise"></i>
+                        <span>Acabados con detalles en oro, plata o cobre envejecido.</span>
+                    </li>
+                </ul>
+                <div class="pt-2">
+                    <a href="https://wa.me/34600000000?text=Hola,%20me%20gustaría%20encargar%20un%20cuadro%20personalizado." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-deepblue hover:bg-deepblue/90 text-white px-8 py-4 rounded-full font-medium transition-all shadow-md">
+                        <i class="fa-brands fa-whatsapp text-xl text-emerald-400"></i> Solicitar Presupuesto por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Proceso en 3 pasos -->
+            <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-sand/80 space-y-8">
+                <h3 class="font-serif text-2xl font-bold text-deepblue">¿Cómo funciona el encargo?</h3>
+                
+                <div class="flex gap-4 items-start">
+                    <div class="w-10 h-10 rounded-full bg-sand flex items-center justify-center text-deepblue font-serif font-bold shrink-0">1</div>
+                    <div>
+                        <h4 class="font-semibold text-deepblue mb-1">Cuéntanos tu idea</h4>
+                        <p class="text-sm text-gray-600 font-light">Escríbenos por WhatsApp comentando las medidas aproximadas y fotos del espacio donde irá ubicado.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                    <div class="w-10 h-10 rounded-full bg-sand flex items-center justify-center text-deepblue font-serif font-bold shrink-0">2</div>
+                    <div>
+                        <h4 class="font-semibold text-deepblue mb-1">Propuesta & Boceto</h4>
+                        <p class="text-sm text-gray-600 font-light">Acordamos la paleta de colores, técnica en relieve o resina, y te enviamos un presupuesto sin compromiso.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                    <div class="w-10 h-10 rounded-full bg-sand flex items-center justify-center text-deepblue font-serif font-bold shrink-0">3</div>
+                    <div>
+                        <h4 class="font-semibold text-deepblue mb-1">Creación & Envío</h4>
+                        <p class="text-sm text-gray-600 font-light">Elaboramos tu obra artesanalmente (proceso de secado de resina aprox. 7-10 días) y te la enviamos con máxima seguridad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-24 px-6 max-w-7xl mx-auto text-center space-y-8">
+        <div class="max-w-2xl mx-auto space-y-4">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-deepblue">¿Tienes alguna duda?</h2>
+            <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+            <p class="text-gray-600 font-light">Estamos disponibles para resolver cualquier consulta sobre envíos, métodos de pago o asesoramiento artístico.</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="https://wa.me/34600000000?text=Hola,%20tengo%20una%20consulta%20general." target="_blank" rel="noopener noreferrer" class="bg-turquoise hover:bg-turquoise/90 text-white px-8 py-4 rounded-full font-medium transition-all shadow-sm flex items-center gap-3">
+                <i class="fa-brands fa-whatsapp text-xl"><span>Escríbenos por WhatsApp</span></i>
+            </a>
+            <a href="mailto:contacto@auramarina.com" class="bg-white hover:bg-sand text-deepblue border border-sand px-8 py-4 rounded-full font-medium transition-all shadow-sm flex items-center gap-3">
+                <i class="fa-regular fa-envelope text-xl text-turquoise"></i> <span>contacto@auramarina.com</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deepblue text-sand/80 py-16 px-6 border-t border-deepblue/40">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div class="space-y-4">
+                <a href="#" class="font-serif text-2xl font-bold tracking-wider text-white flex items-center gap-2">
+                    <i class="fa-solid fa-water text-turquoise"></i> AURA MARINA
+                </a>
+                <p class="text-sm text-sand/70 font-light leading-relaxed">
+                    Arte contemporáneo hecho a mano. Cuadros únicos de resina epoxi y texturas minerales diseñados para transformar espacios en hogares con alma.
+                </p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="font-serif text-white font-semibold text-lg">Enlaces Rápidos</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                    <li><a href="#galeria" class="hover:text-white transition-colors">Cuadros Disponibles</a></li>
+                    <li><a href="#personalizados" class="hover:text-white transition-colors">Pedidos a Medida</a></li>
+                    <li><a href="#contacto" class="hover:text-white transition-colors">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="space-y-4">
+                <h4 class="font-serif text-white font-semibold text-lg">Síguenos</h4>
+                <p class="text-sm text-sand/70 font-light">Descubre el proceso creativo diario de cada obra en nuestras redes sociales.</p>
+                <div class="flex space-x-4 text-xl">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-turquoise hover:text-white transition-colors">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-turquoise hover:text-white transition-colors">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-turquoise hover:text-white transition-colors">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 text-center text-xs text-sand/50">
+            <p>&copy; 2026 Aura Marina. Todos los derechos reservados. Creado con elegancia y pasión artesanal.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para interactividad del menú móvil -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú móvil al hacer click en un enlace
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
